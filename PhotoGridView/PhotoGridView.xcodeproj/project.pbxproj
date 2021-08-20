@@ -3,15 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		294995DB26CF83830063F177 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294995DA26CF83830063F177 /* UIStoryboard+Extension.swift */; };
 		294995FE26CF8F2C0063F177 /* PhotoGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294995FD26CF8F2C0063F177 /* PhotoGridCollectionViewCell.swift */; };
 		2949960026CF8F380063F177 /* PhotoGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294995FF26CF8F380063F177 /* PhotoGridCollectionViewCell.xib */; };
-		2949960226CF946C0063F177 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2949960126CF946C0063F177 /* Images.swift */; };
-		2949960526CF958E0063F177 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2949960426CF958E0063F177 /* ImageData.swift */; };
 		2949960726CF9EE20063F177 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2949960626CF9EE20063F177 /* Constant.swift */; };
 		29C6476126CF7DE400058BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C6476026CF7DE400058BC0 /* AppDelegate.swift */; };
 		29C6476826CF7DE400058BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C6476626CF7DE400058BC0 /* Main.storyboard */; };
@@ -21,14 +19,14 @@
 		29C6477926CF7F3B00058BC0 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C6477826CF7F3B00058BC0 /* PhotoViewController.swift */; };
 		29C6477F26CF7F8C00058BC0 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C6477E26CF7F8C00058BC0 /* Key.swift */; };
 		29C6478126CF7FB700058BC0 /* PGApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C6478026CF7FB700058BC0 /* PGApplication.swift */; };
+		29FB294D26CFDDF300A57F5F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FB294C26CFDDF300A57F5F /* UIImage+Extensions.swift */; };
+		54BBAA192B94365B703E0C91 /* Pods_PhotoGridView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE35440DD74D6A5FC45274E /* Pods_PhotoGridView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		294995DA26CF83830063F177 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		294995FD26CF8F2C0063F177 /* PhotoGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		294995FF26CF8F380063F177 /* PhotoGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGridCollectionViewCell.xib; sourceTree = "<group>"; };
-		2949960126CF946C0063F177 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		2949960426CF958E0063F177 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		2949960626CF9EE20063F177 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		29C6475D26CF7DE400058BC0 /* PhotoGridView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGridView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C6476026CF7DE400058BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +38,10 @@
 		29C6477826CF7F3B00058BC0 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		29C6477E26CF7F8C00058BC0 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		29C6478026CF7FB700058BC0 /* PGApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGApplication.swift; sourceTree = "<group>"; };
+		29FB294C26CFDDF300A57F5F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		36E8CF45833975FD82EDED9C /* Pods-PhotoGridView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridView.release.xcconfig"; path = "Target Support Files/Pods-PhotoGridView/Pods-PhotoGridView.release.xcconfig"; sourceTree = "<group>"; };
+		4CE35440DD74D6A5FC45274E /* Pods_PhotoGridView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoGridView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDADE914AF0EC42AC76B28C /* Pods-PhotoGridView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridView.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridView/Pods-PhotoGridView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54BBAA192B94365B703E0C91 /* Pods_PhotoGridView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				294995DA26CF83830063F177 /* UIStoryboard+Extension.swift */,
+				29FB294C26CFDDF300A57F5F /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -73,7 +77,6 @@
 		2949960326CF94700063F177 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2949960126CF946C0063F177 /* Images.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,14 +88,6 @@
 				29C6476B26CF7DE900058BC0 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		2949960926CFA4230063F177 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				2949960426CF958E0063F177 /* ImageData.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		2949960A26CFA4330063F177 /* Cell */ = {
@@ -108,6 +103,8 @@
 			children = (
 				29C6475F26CF7DE400058BC0 /* PhotoGridView */,
 				29C6475E26CF7DE400058BC0 /* Products */,
+				4A8C9DCE25420AF69B9CB6FD /* Pods */,
+				57962456A94B298F4A579CBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,7 +123,6 @@
 				29C6477D26CF7F5D00058BC0 /* Constant */,
 				294995D926CF836E0063F177 /* Extensions */,
 				29C6477A26CF7F4600058BC0 /* Utility */,
-				2949960926CFA4230063F177 /* Data */,
 				2949960A26CFA4330063F177 /* Cell */,
 				2949960326CF94700063F177 /* Model */,
 				29C6477426CF7F1600058BC0 /* ViewController */,
@@ -163,6 +159,23 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		4A8C9DCE25420AF69B9CB6FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEDADE914AF0EC42AC76B28C /* Pods-PhotoGridView.debug.xcconfig */,
+				36E8CF45833975FD82EDED9C /* Pods-PhotoGridView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		57962456A94B298F4A579CBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CE35440DD74D6A5FC45274E /* Pods_PhotoGridView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29C6477126CF7DE900058BC0 /* Build configuration list for PBXNativeTarget "PhotoGridView" */;
 			buildPhases = (
+				0E71B1D4F87851AEAFD36978 /* [CP] Check Pods Manifest.lock */,
 				29C6475926CF7DE400058BC0 /* Sources */,
 				29C6475A26CF7DE400058BC0 /* Frameworks */,
 				29C6475B26CF7DE400058BC0 /* Resources */,
+				BC60190D354F00AD2DBC6301 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +244,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E71B1D4F87851AEAFD36978 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoGridView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC60190D354F00AD2DBC6301 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoGridView/Pods-PhotoGridView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoGridView/Pods-PhotoGridView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoGridView/Pods-PhotoGridView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		29C6475926CF7DE400058BC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -237,11 +294,10 @@
 				29C6476126CF7DE400058BC0 /* AppDelegate.swift in Sources */,
 				29C6477926CF7F3B00058BC0 /* PhotoViewController.swift in Sources */,
 				294995DB26CF83830063F177 /* UIStoryboard+Extension.swift in Sources */,
-				2949960226CF946C0063F177 /* Images.swift in Sources */,
 				29C6478126CF7FB700058BC0 /* PGApplication.swift in Sources */,
-				2949960526CF958E0063F177 /* ImageData.swift in Sources */,
 				294995FE26CF8F2C0063F177 /* PhotoGridCollectionViewCell.swift in Sources */,
 				2949960726CF9EE20063F177 /* Constant.swift in Sources */,
+				29FB294D26CFDDF300A57F5F /* UIImage+Extensions.swift in Sources */,
 				29C6477726CF7F3100058BC0 /* PhotoGridViewController.swift in Sources */,
 				29C6477F26CF7F8C00058BC0 /* Key.swift in Sources */,
 			);
@@ -387,6 +443,7 @@
 		};
 		29C6477226CF7DE900058BC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDADE914AF0EC42AC76B28C /* Pods-PhotoGridView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -406,6 +463,7 @@
 		};
 		29C6477326CF7DE900058BC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36E8CF45833975FD82EDED9C /* Pods-PhotoGridView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

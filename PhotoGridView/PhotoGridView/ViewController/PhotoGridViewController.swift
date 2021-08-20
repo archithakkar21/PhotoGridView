@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+
 
 class PhotoGridViewController: UIViewController {
     
     //MARK: - Variables-
-    var arrImages: [Images] = []
+    var arrayPost : NSArray = []
+    var isAPILoading       = false
     
     //MARK:- IBOutlets-
     @IBOutlet final private weak var gridCollectionView: UICollectionView!
@@ -18,7 +22,7 @@ class PhotoGridViewController: UIViewController {
     //MARK: - Lifecycle methods-
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareView()
+        callWebservice()
     }
     
     //MARK:- Helper Method-
@@ -30,23 +34,54 @@ class PhotoGridViewController: UIViewController {
     }
 }
 
+// MARK: - Webservice Method
+extension PhotoGridViewController {
+   
+    private func callWebservice() {
+        var url:String!
+        url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=42"
+
+        Alamofire.AF.request(url, method: .get, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                switch response.result{
+                    case .success(let json):
+                        print(json)
+                        DispatchQueue.main.async {
+                           print(json)
+                            self.arrayPost = (json as? NSArray)!
+                            self.prepareView()
+                           self.gridCollectionView.reloadData()
+                    
+                        }
+                    case .failure(let error):
+                        print(error)
+                    }
+            }
+    }
+}
+
 //MARK: - UICollectionView Delegate & Datasource method -
 extension PhotoGridViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        arrImages.count
+        arrayPost.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = gridCollectionView.dequeueReusableCell(withReuseIdentifier: Key.kPhotoGridCollectionViewCell, for: indexPath) as! PhotoGridCollectionViewCell
-        cell.imgData = arrImages[indexPath.row].image
+        if let obj = arrayPost[indexPath.row] as? [String:Any] {
+            cell.imgUrl = obj["url"] as? String
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.view.alpha = 0.5
         let vc = UIStoryboard.main.get(PhotoViewController.self)
-        vc?.selectedImage = arrImages[indexPath.row].image
-        vc?.arrImages = arrImages
+        vc?.selectedImage = (arrayPost[indexPath.row] as? [String:Any])?["url"] as? String
+        vc?.arrImages = arrayPost
         vc?.selectedIndex = indexPath.row
-        self.navigationController?.pushViewController(vc!, animated: true)
+        vc?.modalPresentationStyle = .pageSheet
+        vc?.delegate = self
+        self.navigationController?.present(vc!, animated: true, completion: nil)
     }
 }
 
@@ -54,5 +89,12 @@ extension PhotoGridViewController : UICollectionViewDelegate, UICollectionViewDa
 extension PhotoGridViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: screenWidth/3.05, height: screenWidth/3.05)
+    }
+}
+
+//MARK: - Dismiss popup delegate
+extension PhotoGridViewController: DismissDelegate {
+    func dismissView() {
+        view.alpha = 1
     }
 }

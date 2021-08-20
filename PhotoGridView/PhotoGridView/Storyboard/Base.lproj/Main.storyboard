@@ -57,20 +57,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHt-JU-q8T">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <connections>
+                                    <action selector="didTapOnDismissBtn:" destination="lul-vz-ijB" eventType="touchUpInside" id="Xq5-0D-0Px"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6xa-3f-a8b">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="250" width="414" height="346"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yyZ-R8-Rxq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HHt-JU-q8T" secondAttribute="bottom" id="IfD-ge-KmW"/>
                             <constraint firstAttribute="trailing" secondItem="6xa-3f-a8b" secondAttribute="trailing" id="Q1t-m3-NFc"/>
                             <constraint firstItem="6xa-3f-a8b" firstAttribute="leading" secondItem="GTl-hj-d60" secondAttribute="leading" id="S9y-DW-qaM"/>
-                            <constraint firstItem="6xa-3f-a8b" firstAttribute="top" secondItem="GTl-hj-d60" secondAttribute="top" id="iiV-EQ-pnt"/>
-                            <constraint firstAttribute="bottom" secondItem="6xa-3f-a8b" secondAttribute="bottom" id="x2S-0g-g7c"/>
+                            <constraint firstItem="yyZ-R8-Rxq" firstAttribute="trailing" secondItem="HHt-JU-q8T" secondAttribute="trailing" id="ZZ4-7J-nxV"/>
+                            <constraint firstItem="HHt-JU-q8T" firstAttribute="top" secondItem="yyZ-R8-Rxq" secondAttribute="top" id="ZmE-zS-rag"/>
+                            <constraint firstItem="HHt-JU-q8T" firstAttribute="leading" secondItem="yyZ-R8-Rxq" secondAttribute="leading" id="cqh-eG-ixl"/>
+                            <constraint firstItem="6xa-3f-a8b" firstAttribute="top" secondItem="GTl-hj-d60" secondAttribute="top" constant="250" id="iiV-EQ-pnt"/>
+                            <constraint firstAttribute="bottom" secondItem="6xa-3f-a8b" secondAttribute="bottom" constant="300" id="x2S-0g-g7c"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnDismiss" destination="HHt-JU-q8T" id="dFs-sQ-qLa"/>
                         <outlet property="imageView" destination="6xa-3f-a8b" id="UXg-Yb-hib"/>
                     </connections>
                 </viewController>

@@ -19,7 +19,6 @@ class PGApplication {
     func prepareNavigation() {
         PGApplication.appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
         let photoGridVC = UIStoryboard.main.get(PhotoGridViewController.self)!
-        photoGridVC.arrImages = ImageData.getImageData()
         let navigationVC = UINavigationController(rootViewController: photoGridVC)
         PGApplication.appDelegate.window?.rootViewController = navigationVC
         PGApplication.appDelegate.window?.makeKeyAndVisible()

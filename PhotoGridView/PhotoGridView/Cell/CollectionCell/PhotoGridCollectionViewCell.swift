@@ -10,9 +10,9 @@ import UIKit
 class PhotoGridCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Variable-
-    var imgData: UIImage! {
+    var imgUrl: String! {
         didSet {
-            imgView.image = imgData
+            imgView.downloaded(from: imgUrl)
         }
     }
     

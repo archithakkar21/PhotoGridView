@@ -7,15 +7,20 @@
 
 import UIKit
 
+protocol  DismissDelegate {
+    func dismissView()
+}
 class PhotoViewController: UIViewController {
     
     //MARK: - Variables -
-    var selectedImage   : UIImage!
-    var arrImages       : [Images] = []
+    var selectedImage   : String!
+    var arrImages       : NSArray = []
     var selectedIndex   : Int!
+    var delegate : DismissDelegate!
     
     //MARK: - IBOutlets -
-    @IBOutlet final private weak var imageView: UIImageView!
+    @IBOutlet final private weak var btnDismiss : UIButton!
+    @IBOutlet final private weak var imageView  : UIImageView!
     
     //MARK: - Lifecycle method-
     override func viewDidLoad() {
@@ -25,7 +30,7 @@ class PhotoViewController: UIViewController {
     
     //MARK: - Helper method-
     private func prepareView() {
-        imageView.image = selectedImage
+        imageView.downloaded(from: selectedImage)
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
@@ -41,19 +46,26 @@ class PhotoViewController: UIViewController {
             switch swipeGesture.direction {
             case UISwipeGestureRecognizer.Direction.left:
                 if selectedIndex != arrImages.count - 1{
-                    selectedImage = arrImages[selectedIndex+1].image
+                    selectedImage = (arrImages[selectedIndex+1] as? [String:Any])?["url"] as? String
                     selectedIndex = selectedIndex+1
                 }
-                imageView.image = selectedImage
+                imageView.downloaded(from: selectedImage)
             case UISwipeGestureRecognizer.Direction.right:
                 if selectedIndex != 0 {
-                    selectedImage = arrImages[selectedIndex - 1].image
+                    selectedImage = (arrImages[selectedIndex-1] as? [String:Any])?["url"] as? String
                     selectedIndex = selectedIndex-1
                 }
-                imageView.image = selectedImage
+                imageView.downloaded(from: selectedImage)
             default:
                 break
             }
         }
+    }
+    
+    //MARK: - IBActions
+    @IBAction private func didTapOnDismissBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: { 
+            self.delegate.dismissView()
+        })
     }
 }
